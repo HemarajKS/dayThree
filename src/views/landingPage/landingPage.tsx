@@ -38,6 +38,12 @@ const LandingPage = (child: any) => {
             <img
               src={require('../../assets/images/logo.png')}
               alt="Login Logo"
+              className="imgOne"
+            />
+            <img
+              src={require('../../assets/images/logo (3).png')}
+              alt="Login Logo"
+              className="imgTwo"
             />
           </div>
           <div className="loginLogoBody">
@@ -68,6 +74,18 @@ const LandingPage = (child: any) => {
             <Route path="/signUp" element={<SignUp />} />
           </Routes>
           {child !== '{}' ? child.props : ''}
+        </div>
+        <div className="fingerPrintContainer">
+          <div className="fingerPrintLogo">
+            <img
+              src={require('../../assets/icons/fingerprint icon.png')}
+              alt="fingerPrint"
+            />
+          </div>
+          <div className="fingerPrintBody">
+            <div className="or">OR</div>
+            <div className="fingerPrintText">Use your fingerprint to login</div>
+          </div>
         </div>
       </div>
     </div>

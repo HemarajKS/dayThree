@@ -45,6 +45,14 @@
     display: none;
 }
 
+.imgTwo {
+    display: none;
+}
+
+.fingerPrintContainer {
+    display: none;
+}
+
 @media screen and (max-width: 955px) {
     .loginContainer {
         flex-direction: column;
@@ -81,12 +89,59 @@
     }
     .loginLogoContainer {
         padding-bottom: 0;
+        padding-top: 47px;
         border-bottom: 1px solid #f5f7fb4f;
         display: flex;
         flex-direction: column;
-        justify-content: flex-end;
+        justify-content: space-between;
     }
-    .loginLogo img {
-        height: 9em;
+    .loginLogo .imgOne {
+        display: none;
+    }
+    .imgTwo {
+        display: block;
+    }
+    .fingerPrintContainer {
+        margin-top: 59px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 14px;
+    }
+    .fingerPrintBody {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 13px;
+    }
+    .or {
+        color: #ffffff;
+        font-size: 18px;
+        font-weight: bold;
+        letter-spacing: 0;
+        line-height: 24px;
+        text-align: center;
+    }
+    .fingerPrintText {
+        color: #ffffff;
+        font-size: 13px;
+        letter-spacing: 0.12px;
+        line-height: 21px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .signInsignUpTab {
+        width: 16em;
+    }
+    .input {
+        width: 16em;
+    }
+    .signUpLink div {
+        width: 16em;
+    }
+    .signUpFormTitle {
+        width: 12.5em;
     }
 }
