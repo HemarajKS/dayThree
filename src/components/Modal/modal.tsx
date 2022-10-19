@@ -75,7 +75,6 @@ const Modal = (props: any) => {
         ''
       )}
       <form className="modalBodyForm" onSubmit={submitHandler}>
-        <input type="submit" />
         <div className="modalInput occupy">
           <div>URL</div>
           <input
@@ -136,24 +135,25 @@ const Modal = (props: any) => {
           <div>Notes</div>
           <textarea className="modalInputBar" name="notes" />
         </div>
+        <div></div>
+        {props.props === 'Add Site' ? (
+          <div className="modalButtons">
+            <button className="modalButton modalResetButton">Reset</button>
+            <button className="modalButton modalSaveButton" type="submit">
+              Save
+            </button>
+          </div>
+        ) : (
+          ''
+        )}
+        {props.props === 'Site Details' ? (
+          <div className="modalButtons">
+            <button className="modalButton modalSaveButton">Update</button>
+          </div>
+        ) : (
+          ''
+        )}
       </form>
-      {props.props === 'Site Details' ? (
-        <div className="modalButtons">
-          <button className="modalButton modalSaveButton">Update</button>
-        </div>
-      ) : (
-        ''
-      )}
-      {props.props === 'Add Site' ? (
-        <div className="modalButtons">
-          <button className="modalButton modalResetButton">Reset</button>
-          <button className="modalButton modalSaveButton" type="submit">
-            Save
-          </button>
-        </div>
-      ) : (
-        ''
-      )}
     </div>
   )
 }
