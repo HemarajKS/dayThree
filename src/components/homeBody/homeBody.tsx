@@ -27,6 +27,24 @@ const HomeBody = () => {
       notes: '',
       icon: require(`../../assets/icons/LinkdIn.png`),
     },
+    {
+      siteName: 'Linkdin',
+      url: 'www.linkdin.com',
+      sector: 'Social Media',
+      userName: 'ssmraok',
+      sitePassword: 'abcd123',
+      notes: '',
+      icon: require(`../../assets/icons/LinkdIn.png`),
+    },
+    {
+      siteName: 'Youtube',
+      url: 'www.linkdin.com',
+      sector: 'Social Media',
+      userName: 'ssmraok',
+      sitePassword: 'abcd123',
+      notes: '',
+      icon: require(`../../assets/icons/LinkdIn.png`),
+    },
   ]
 
   const currentUserData = localStorage.getItem('currentUser') || ''
@@ -51,6 +69,13 @@ const HomeBody = () => {
     <div className="homeBodyContainer">
       <div className="homeBodyHeader">
         <div className="headerBodyTitle">Sites</div>
+        <div className="homeBodyCount mobileHomeBodyCount">
+          <div className="socialMedia">Social Media</div>
+          <div className="socialMediaCount">{previousData.length}</div>
+          <div className="socialMediaDropDown">
+            <img src={require('../../assets/icons/Path Copy.png')} alt="add" />
+          </div>
+        </div>
         <div className="headerBodyOptions">
           <div className="headerSearch">
             <input type="text" className="searchbar" placeholder="Search" />

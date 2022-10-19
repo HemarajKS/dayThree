@@ -209,6 +209,10 @@
     position: relative;
 }
 
+.mobileHomeBodyCount {
+    display: none;
+}
+
 @media screen and (max-width: 1040px) {
     .homeBodyContainer {
         padding: 3em 1.2em;
@@ -224,4 +228,20 @@
     }
 }
 
-@media screen and (max-width: 635px) {}
+@media screen and (max-width: 582px) {
+    .homeBodyCount {
+        display: none;
+    }
+    .mobileHomeBodyCount {
+        display: flex;
+        position: absolute;
+        right: 1em;
+        top: 1.2em;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .cardContents {
+        width: 270px;
+    }
+}

@@ -1,9 +1,9 @@
-import { useEffect, useState } from 'react';
-import './modal.css';
+import { useEffect, useState } from 'react'
+import './modal.css'
 
 const Modal = (props: any) => {
-  console.log('ele', props);
-  const [edit, setEdit] = useState(false);
+  console.log('ele', props)
+  const [edit, setEdit] = useState(false)
   const [value, setValue] = useState({
     siteName: '',
     url: '',
@@ -11,36 +11,36 @@ const Modal = (props: any) => {
     userName: '',
     sitePassword: '',
     notes: '',
-  });
+  })
 
-  const currentUser = JSON.parse(localStorage.getItem('currentUser') || '[]');
-  console.log('current', currentUser);
+  const currentUser = JSON.parse(localStorage.getItem('currentUser') || '[]')
+  console.log('current', currentUser)
 
   const previousData: any = JSON.parse(
-    localStorage.getItem(currentUser) || '[]'
-  );
+    localStorage.getItem(currentUser) || '[]',
+  )
 
-  console.log('current', previousData);
+  console.log('current', previousData)
 
   const onChangeHandler = (e: any) => {
-    setValue(e.target.value);
-  };
+    setValue(e.target.value)
+  }
 
-  const currentItem = previousData[props.element];
-  console.log('current', currentItem);
+  const currentItem = previousData[props.element]
+  console.log('current', currentItem)
 
   const editVal = () => {
     if (props.props === 'Add Site') {
-      setEdit(true);
+      setEdit(true)
     }
-  };
+  }
 
   useEffect(() => {
-    editVal();
-  });
+    editVal()
+  })
 
   const submitHandler = (e: any) => {
-    e.preventDefault();
+    e.preventDefault()
 
     const newData = {
       siteName: e.target.siteName.value,
@@ -49,10 +49,10 @@ const Modal = (props: any) => {
       userName: e.target.userName.value,
       sitePassword: e.target.sitePassword.value,
       notes: e.target.notes.value,
-    };
+    }
 
-    console.log('new data', newData);
-  };
+    console.log('new data', newData)
+  }
 
   return (
     <div className="modalBody">
@@ -62,9 +62,9 @@ const Modal = (props: any) => {
           <button
             className="modalEditButton"
             onClick={() => {
-              setEdit(!edit);
+              setEdit(!edit)
               if (props.props === 'Add Site') {
-                setEdit(true);
+                setEdit(true)
               }
             }}
           >
@@ -155,7 +155,7 @@ const Modal = (props: any) => {
         ''
       )}
     </div>
-  );
-};
+  )
+}
 
-export default Modal;
+export default Modal
