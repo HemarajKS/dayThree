@@ -75,18 +75,6 @@ const LandingPage = (child: any) => {
           </Routes>
           {child !== '{}' ? child.props : ''}
         </div>
-        <div className="fingerPrintContainer">
-          <div className="fingerPrintLogo">
-            <img
-              src={require('../../assets/icons/fingerprint icon.png')}
-              alt="fingerPrint"
-            />
-          </div>
-          <div className="fingerPrintBody">
-            <div className="or">OR</div>
-            <div className="fingerPrintText">Use your fingerprint to login</div>
-          </div>
-        </div>
       </div>
     </div>
   )
