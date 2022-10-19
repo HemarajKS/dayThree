@@ -97,16 +97,14 @@ const Modal = (props: any) => {
         </div>
         <div className="modalInput">
           <div>Sector/Folder</div>
-          <div className="paswordEyeContainer">
-            <input
-              type="text"
-              name="sector"
-              className="modalInputBar passwordEye"
-              onChange={onChangeHandler}
-              value={edit ? value.sector : currentItem.sector}
-            />
-            <img src={require('../../assets/icons/Path Copy.png')} alt="eye" />
-          </div>
+
+          <input
+            type="text"
+            name="sector"
+            className="modalInputBar"
+            onChange={onChangeHandler}
+            value={edit ? value.sector : currentItem.sector}
+          />
         </div>
         <div className="modalInput">
           <div>User Name</div>
@@ -120,16 +118,14 @@ const Modal = (props: any) => {
         </div>
         <div className="modalInput">
           <div>Site Password</div>
-          <div className="paswordEyeContainer">
-            <input
-              type="text"
-              name="sitePassword"
-              className="modalInputBar passwordEye"
-              onChange={onChangeHandler}
-              value={edit ? value.sitePassword : currentItem.sitePassword}
-            />
-            <img src={require('../../assets/icons/eye_on.png')} alt="eye" />
-          </div>
+
+          <input
+            type="text"
+            name="sitePassword"
+            className="modalInputBar"
+            onChange={onChangeHandler}
+            value={edit ? value.sitePassword : currentItem.sitePassword}
+          />
         </div>
         <div className="modalInput occupy">
           <div>Notes</div>

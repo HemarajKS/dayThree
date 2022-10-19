@@ -137,6 +137,27 @@
         display: flex;
         justify-content: flex-start;
     }
+    .signInButton button {
+        background-color: var(--fontClr);
+        border: none;
+        outline: none;
+        margin: 23px 0 -4px 0;
+        font-size: 18px;
+        letter-spacing: 1.2px;
+        line-height: 24px;
+        color: var(--blueClr);
+        padding: 10px 28px;
+        border-radius: 0.4em;
+    }
+    .loginFormTitle {
+        font-size: 20px;
+        letter-spacing: 1.67px;
+        line-height: 27px;
+        text-align: center;
+        font-weight: 500;
+        margin-bottom: 9px;
+        margin-top: 10px;
+    }
 }
 
 @media screen and (max-width: 400px) {
